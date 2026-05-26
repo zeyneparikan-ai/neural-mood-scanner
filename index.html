@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura & Vibe Check AI</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/face-api.js@0.22.2/dist/face-api.min.js"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        <h1>VIBE CHECK <span class="ai-badge">AI</span></h1>
+        <p class="subtitle">Yapay zeka anlık modunu ve auranı analiz ediyor. Hazırsan kameraya bak!</p>
+
+        <div class="camera-area">
+            <video id="video" width="400" height="300" autoplay muted playsinline></video>
+            <div class="scanner-line"></div>
+        </div>
+
+        <button id="analyze-btn" disabled>Model Yükleniyor...</button>
+
+        <div id="result-box" class="hidden">
+            <h3>ANALİZ SONUCU</h3>
+            <div class="result-row"><strong>Baskın Mod:</strong> <span id="detected-emotion">-</span></div>
+            <div class="result-row"><strong>Aura Skoru:</strong> <span id="aura-score">-</span></div>
+            <p id="vibe-comment">"Analiz yapılıyor..."</p>
+        </div>
+    </div>
+
+</body>
+</html>
